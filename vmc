@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "Username: " user
+read -s -p "Password: " pass
+echo ""
+if [ -z $2 ]; then
+	vmrun -h 'https://localhost:8333/sdk' -u "$user" -p "$pass" $1
+else
+	vmrun -h 'https://localhost:8333/sdk' -u "$user" -p "$pass" $1 "[standard] $2/$2.vmx"
+fi
+
