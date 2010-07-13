@@ -7,4 +7,3 @@ if [ -z $2 ]; then
 else
 	vmrun -h 'https://localhost:8333/sdk' -u "$user" -p "$pass" $1 "[standard] $2/$2.vmx"
 fi
-
