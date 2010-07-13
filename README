@@ -5,8 +5,16 @@
 
              <vmc>
 
-The lil' shell script
-that makes managing
-VMWare Server 2
-virtual machines
-simple and easy :)
+The lil' shell script that makes managing VMWare Server 2 virtual machines simple and easy :)
+
+-{ EXAMPLES }-
+
+Example 1. Starting a VM named linux.vmx
+$ vmc start linux
+
+Example 2. Pause a VM named windows2k.vmx
+$ vmc pause windows2k
+
+-{ NOTE }-
+
+Currently, the script uses the name of the vmx file (wo the extention) as the directory that contains the vmx. I originally did this because I configured my vm's that way. At some point, I'll mod the script so it checks for a '/' in the vm name and if it finds one it will tack on .vmx to the end of the name and use it as the vmx location.
